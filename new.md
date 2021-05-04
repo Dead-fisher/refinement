@@ -1,135 +1,68 @@
 | parameters | description | default |
-
 | :----: | :----: | :----: |
-
-| _comment | | That's all |
-
-| gmx_prep | | gmx grompp -maxwarn 1 |
-
-| gmx_run | | gmx mdrun -ntmpi 1 |
-
-| gmx_split_traj | | echo 0 | gmx trjconv -sep -f traj.trr -o confs/conf.gro -vel |
-
-| template_dir | | ./template |
-
-| init_graph | | [] |
-
-| numb_iter | | 3 |
-
-| bf_traj_stride | | 500 |
-
-| numb_walkers | | 2 |
-
-| bias_trust_lvl_1 | | 2 |
-
-| bias_trust_lvl_2 | | 3 |
-
-| bias_nsteps | | 20000 |
-
-| bias_frame_freq | | 20 |
-
-| sel_threshold | | 2 |
-
-| cluster_threshold | | 1.5 |
-
-| num_of_cluster_threshhold | | 8 |
-
-| max_sel | | 30 |
-
-| bias_dt | | 0.002 |
-
-| bias_temperature | | 320 |
-
-| res_nsteps | | 25000 |
-
-| res_frame_freq | | 50 |
-
-| res_dt | | 0.002 |
-
-| res_temperature | | 320 |
-
-| res_kappa | | 500 |
-
-| res_traj_stride | | 500 |
-
-| res_ang_stride | | 5 |
-
-| res_prt_file | | plm.res.out |
-
-| res_cmpf_error | | False |
-
-| init_numb_cluster_upper | | 26 |
-
-| init_numb_cluster_lower | | 16 |
-
-| conf_start | | 0 |
-
-| conf_every | | 1 |
-
-| numb_model | | 4 |
-
-| neurons | | [256, 128, 64, 32] |
-
-| resnet | | True |
-
-| batch_size | | 128 |
-
-| numb_epoches | | 2000 |
-
-| starter_lr | | 0.0008 |
-
-| decay_steps | | 120 |
-
-| decay_rate | | 0.96 |
-
-| res_iter | | 13 |
-
-| res_numb_epoches | | 2000 |
-
-| res_starter_lr | | 0.0008 |
-
-| res_olddata_ratio | | 7 |
-
-| res_decay_steps | | 120 |
-
-| res_decay_rate | | 0.96 |
-
-| machine_type | | Slurm |
-
-| queue_name | | GPU_2080Ti |
-
-| cleanup | | True |
-
-| enhc_thread | | 8 |
-
-| res_thread | | 8 |
-
-| train_thread | | 8 |
-
-| enhc_number_node | | 1 |
-
-| enhc_cpu_per_node | | 8 |
-
-| enhc_gpu_per_node | | 1 |
-
-| enhc_group_size | | 1 |
-
-| post_number_node | | 1 |
-
-| post_cpu_per_node | | 4 |
-
-| post_gpu_per_node | | 0 |
-
-| post_group_size | | 1 |
-
-| res_number_node | | 1 |
-
-| res_cpu_per_node | | 8 |
-
-| res_gpu_per_node | | 1 |
-
-| res_group_size | | 10 |
-
-| if_cuda_multi_devices | | False |
-
-| export_sources | | ['PATH=/home/dongdong/gromacs-dp-rid/bin:$PATH'] |
+| _comment | 0 | That's all |
+| gmx_prep | 0 | gmx grompp -maxwarn 1 |
+| gmx_run | 0 | gmx mdrun -ntmpi 1 |
+| gmx_split_traj | 0 | echo 0 | gmx trjconv -sep -f traj.trr -o confs/conf.gro -vel |
+| template_dir | 0 | ./template |
+| init_graph | 0 | [] |
+| numb_iter | 0 | 3 |
+| bf_traj_stride | 0 | 500 |
+| numb_walkers | 0 | 2 |
+| bias_trust_lvl_1 | 0 | 2 |
+| bias_trust_lvl_2 | 0 | 3 |
+| bias_nsteps | 0 | 20000 |
+| bias_frame_freq | 0 | 20 |
+| sel_threshold | 0 | 2 |
+| cluster_threshold | 0 | 1.5 |
+| num_of_cluster_threshhold | 0 | 8 |
+| max_sel | 0 | 30 |
+| bias_dt | 0 | 0.002 |
+| bias_temperature | 0 | 320 |
+| res_nsteps | 0 | 25000 |
+| res_frame_freq | 0 | 50 |
+| res_dt | 0 | 0.002 |
+| res_temperature | 0 | 320 |
+| res_kappa | 0 | 500 |
+| res_traj_stride | 0 | 500 |
+| res_ang_stride | 0 | 5 |
+| res_prt_file | 0 | plm.res.out |
+| res_cmpf_error | 0 | False |
+| init_numb_cluster_upper | 0 | 26 |
+| init_numb_cluster_lower | 0 | 16 |
+| conf_start | 0 | 0 |
+| conf_every | 0 | 1 |
+| numb_model | 0 | 4 |
+| neurons | 0 | [256, 128, 64, 32] |
+| resnet | 0 | True |
+| batch_size | 0 | 128 |
+| numb_epoches | 0 | 2000 |
+| starter_lr | 0 | 0.0008 |
+| decay_steps | 0 | 120 |
+| decay_rate | 0 | 0.96 |
+| res_iter | 0 | 13 |
+| res_numb_epoches | 0 | 2000 |
+| res_starter_lr | 0 | 0.0008 |
+| res_olddata_ratio | 0 | 7 |
+| res_decay_steps | 0 | 120 |
+| res_decay_rate | 0 | 0.96 |
+| machine_type | 0 | Slurm |
+| queue_name | 0 | GPU_2080Ti |
+| cleanup | 0 | True |
+| enhc_thread | 0 | 8 |
+| res_thread | 0 | 8 |
+| train_thread | 0 | 8 |
+| enhc_number_node | 0 | 1 |
+| enhc_cpu_per_node | 0 | 8 |
+| enhc_gpu_per_node | 0 | 1 |
+| enhc_group_size | 0 | 1 |
+| post_number_node | 0 | 1 |
+| post_cpu_per_node | 0 | 4 |
+| post_gpu_per_node | 0 | 0 |
+| post_group_size | 0 | 1 |
+| res_number_node | 0 | 1 |
+| res_cpu_per_node | 0 | 8 |
+| res_gpu_per_node | 0 | 1 |
+| res_group_size | 0 | 10 |
+| if_cuda_multi_devices | 0 | False |
+| export_sources | 0 | ['PATH=/home/dongdong/gromacs-dp-rid/bin:$PATH'] |
